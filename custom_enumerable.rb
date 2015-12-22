@@ -7,4 +7,8 @@ module CustomEnumerable
     end
     result 
   end
+
+  def find(&block)
+    
+  end
 end
