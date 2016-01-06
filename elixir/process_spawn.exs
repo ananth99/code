@@ -1,4 +1,4 @@
-i# Process spawing in elixir
+# Process spawing in elixir
 # Author: Ananth Madhavan
 spawn_link fn -> raise "This is an error!" end
 
