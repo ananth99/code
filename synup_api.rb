@@ -37,7 +37,7 @@ synup_bot.get_updates(fail_silently: true) do |message|
   end 
 end
 
-def get_reviews_by_site(loc_id)
+def get_reviews_by_site(loc_id, site)
   
 end
 
