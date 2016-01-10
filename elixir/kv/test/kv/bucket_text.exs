@@ -1,4 +1,4 @@
-defmodule Kv.BucketTest do
+defmodule KV.BucketTest do
   use ExUnit.Case, async: true
 
   setup do
@@ -7,9 +7,15 @@ defmodule Kv.BucketTest do
   end
 
   test "stores values by key", %{bucket: bucket} do
-    assert Kv.Bucket.get(bucket, "milk") == nil
+    assert KV.Bucket.get(bucket, "milk") == nil
 
-    Kv.Bucket.put(bucket, "milk", 3)
-    assert Kv.Bucket.get(bucket, "milk") == 3
+    KV.Bucket.put(bucket, "milk", 3)
+    assert KV.Bucket.get(bucket, "milk") == 3
+  end
+
+  test "pops the given key from the bucket", %{bucket: bucket} do
+    KV.Bucket.put(bucket, "milk", 3)
+    KV.Bucket.delete(bucket, "milk")
+    assert KV.Bucket.get(bucket, "milk") == nil
   end
 end
