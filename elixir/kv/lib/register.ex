@@ -31,7 +31,7 @@ defmodule KV.Register do
   end
 
   def handle_call({:lookup, name}, _from, names) do
-
+    {:reply, Map.fetch(names, name), names}
   end
 
   def handle_cast({:create, name}, names) do
