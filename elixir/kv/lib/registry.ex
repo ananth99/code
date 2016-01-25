@@ -1,4 +1,4 @@
-defmodule KV.Register do
+defmodule KV.Registry do
   use GenServer
 
   ## Client API
